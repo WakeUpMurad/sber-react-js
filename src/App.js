@@ -16,7 +16,7 @@ const App = () => {
         <Routes>
           <Route
             element={<MainLayout />}
-            path="https://wakeupmurad.github.io/sber-react-js/"
+            path="/sber-react-js"
           >
             <Route
               element={<Home />}
