@@ -1,0 +1,18 @@
+.card {
+  padding: 16px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card img {
+  max-width: 45vw;
+  margin: 0 auto;
+}
+
+.body {
+  height: 6vw;
+  overflow: hidden;
+}
+.meta {
+  height: 100%;
+}

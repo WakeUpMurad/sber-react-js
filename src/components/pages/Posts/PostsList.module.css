@@ -1,0 +1,26 @@
+.postsList {
+}
+.actionField {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filterAndSearch {
+  display: flex;
+}
+
+.row {
+  gap: 1rem;
+  justify-content: center;
+  overflow: hidden;
+}
+.column {
+  min-width: 28vw;
+  height: 30vw;
+}
+
+.cardLink {
+  display: flex;
+  max-height: 34vh;
+}
