@@ -1,0 +1,6 @@
+{
+  "сompillerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}

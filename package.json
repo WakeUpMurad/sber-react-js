@@ -1,27 +1,28 @@
 {
-  "homepage": "https://wakeupmurad.github.io/sber-react-js/",
   "name": "reac-app-course",
   "version": "0.1.0",
   "description": "Учебный проект школы JS",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
     "antd": "^5.17.3",
     "axios": "^1.6.8",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "firebase": "^10.12.1",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
     "react-paginate": "^8.2.0",
+    "react-redux": "^9.1.2",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "run-p start:*",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start:front": "react-scripts start",
     "start:backend": "node backend/server.js",
     "build": "react-scripts build",
@@ -51,7 +52,6 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "gh-pages": "^6.1.1",
     "npm-run-all": "^4.1.5"
   }
 }

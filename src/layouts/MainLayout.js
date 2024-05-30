@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { Layout, ConfigProvider } from 'antd'
 import { TinyColor } from '@ctrl/tinycolor'
-import MySlider from '../components/MySlider/MySlider'
-import MyHeader from '../components/MyHeader/MyHeader'
-import MyFooter from '../components/MyFooter/MyFooter'
+import Header from '../components/Header/Header'
+import Slider from '../components/Slider/Slider'
+import Footer from '../components/Footer/Footer'
 import classes from './MainLayout.module.css'
 
 const { Content } = Layout
@@ -38,16 +38,16 @@ const MainLayout = () => {
       }}
     >
       <Layout className={classes.layout}>
-        <MySlider collapsed={collapsed} />
+        <Slider collapsed={collapsed} />
         <Layout>
-          <MyHeader
+          <Header
             setCollapsed={setCollapsed}
             collapsed={collapsed}
           />
           <Content className={classes.content}>
             <Outlet />
           </Content>
-          <MyFooter />
+          <Footer />
         </Layout>
       </Layout>
     </ConfigProvider>

@@ -1,51 +1,27 @@
 import * as React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import MainLayout from './layouts/MainLayout'
-import Home from './components/pages/Home/Home'
-import About from './components/pages/About/About'
-import Contacts from './components/pages/Contacts/Contacts'
-import NotFound from './components/pages/NotFound/NotFound'
-import Posts from './components/pages/Posts/Posts'
-import SinglePost from './components/pages/Posts/SinglePost'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { setUser } from '../src/redux/slices/userSlice'
+import { useAuth } from './hooks/useAuth'
+import AppRouter from './AppRouter'
 import './App.css'
+import Error from './components/Error/Error'
 
 const App = () => {
+  const dispatch = useDispatch()
+  const { isAuth } = useAuth()
+
+  useEffect(() => {
+    if (localStorage.getItem('auth')) {
+      dispatch(setUser({ email: localStorage.getItem('email'), id: localStorage.getItem('id'), tokes: localStorage.getItem('token') }))
+    }
+  }, [dispatch])
+
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Routes>
-          <Route
-            element={<MainLayout />}
-            path="/sber-react-js"
-          >
-            <Route
-              element={<Home />}
-              index
-            />
-            <Route
-              element={<About />}
-              path="about"
-            />
-            <Route
-              element={<Contacts />}
-              path="contacts"
-            />
-            <Route
-              element={<Posts />}
-              path="posts"
-            />
-            <Route
-              element={<SinglePost />}
-              path="posts/:id"
-            />
-            <Route
-              element={<NotFound />}
-              path="*"
-            />
-          </Route>
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <AppRouter isAuth={isAuth} />
+      <Error />
+    </div>
   )
 }
 
