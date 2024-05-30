@@ -10,7 +10,7 @@ const AppRouter = () => {
     <Routes>
       <Route
         element={<MainLayout />}
-        path="/"
+        path="https://wakeupmurad.github.io/sber-react-js/"
       >
         {publicRoutes.map((route) => (
           <Route

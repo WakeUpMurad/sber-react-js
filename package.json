@@ -1,4 +1,5 @@
 {
+  "homepage": "https://wakeupmurad.github.io/sber-react-js",
   "name": "reac-app-course",
   "version": "0.1.0",
   "description": "Учебный проект школы JS",
@@ -22,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "run-p start:*",
     "start:front": "react-scripts start",
     "start:backend": "node backend/server.js",
@@ -52,6 +55,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.1.1",
     "npm-run-all": "^4.1.5"
   }
 }
